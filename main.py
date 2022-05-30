@@ -11,7 +11,10 @@ screen = pygame.display.set_mode([WIDTH,HEIGHT])
 pygame.display.set_caption('Painting Tool')
 
 def draw_window():
-    pygame.draw.rect(screen,'gray',[0,0,70,HEIGHT])
+    pygame.draw.rect(screen,'gray',[0,0,50,HEIGHT]) #(x,y,w,h)  top left coordinates (x,y) width and height (w,h) 
+    pygame.draw.line(screen,'black',[50,0],[50,HEIGHT],2)
+    brush = pygame.draw.rect(screen,'black',[10,10,30,30]) 
+    brush_circle = pygame.draw.circle(screen,'white',(25,25),7.5)
 
 run = True
 while run:
@@ -24,5 +27,6 @@ while run:
         if event.type == pygame.QUIT:
             run = False
     pygame.display.flip()
+    #print(pygame.mouse.get_pos())
 
 pygame.quit()
