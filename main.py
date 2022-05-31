@@ -2,7 +2,7 @@ from matplotlib.pyplot import draw
 import pygame
 pygame.init()
 
-fps = 60
+fps = 120
 timer = pygame.time.Clock()
 WIDTH = 1300
 HEIGHT = 600
